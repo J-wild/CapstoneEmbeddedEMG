@@ -7,6 +7,13 @@ This project provides a scalable 8-channel Electromyography (EMG) acquisition sy
 ## 1. The Model Testbench Program
 The Testbench validates the Arduino UNO Q’s ability to execute local neural networks and measures performance metrics such as accuracy and latency.
 
+<div align="center">
+  <div style="background-color:white; display:inline-block; padding:10px; border-radius:5px;">
+    <img src="readmeImages/image1.png" alt="">
+  </div>
+  <p><b>Fig. 1.</b> - Overview of the Model testbench architecture.</p>
+</div>
+
 ### Components
 * **Prediction Dashboard (Desktop):** A Python-based GUI (Tkinter/Matplotlib) for loading CSV datasets, selecting signal windows, and visualizing confusion matrices and inference times
 * **MCU Middleman (C++):** Runs on the STM32; manages serial data flow between the Desktop and the Qualcomm processor via the **Arduino Router Bridge** .
@@ -21,10 +28,17 @@ The Testbench validates the Arduino UNO Q’s ability to execute local neural ne
 6. Select a data segment and click **"Send Selection"** to trigger remote inference.
 
 
-
 ## 2. The Data Acquisition (DAQ) Program
 The DAQ program enables continuous streaming of raw EMG data from the ADS1298 custom PCB to a host PC for real-time visualization and logging.
 This program does not interface with the MPU and therefore only uses a C++ arduino sketch and a PC python program to visualise the signals.
+
+<div align="center">
+  <div style="background-color:white; display:inline-block; padding:10px; border-radius:5px;">
+    <img src="readmeImages/image2.png" alt=" ">
+  </div>
+  <p><b>Fig. 2.</b> - Overview of the DAQ program architecture.</p>
+</div>
+
 
 ### Software Pipeline
 1. **AFE Interfacing:** Polled via the `DRDY` (Data Ready) pin; retrieves 27-byte blocks over SPI.
@@ -34,6 +48,9 @@ This program does not interface with the MPU and therefore only uses a C++ ardui
 ### Componants
 1. **Firmware (C++):** A program running on the UNO's STM32 to interface, boot, configure and retrieve data from the ADS1298.
 2. **Visualizer** A Desktop Python application to plot the incoming serial EMG data and its frequency information and export it to a CSV file.
+
+
+
 
 ### Usage
 1. Connect the UNO Q via USB-C.
