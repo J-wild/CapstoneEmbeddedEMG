@@ -1,0 +1,7 @@
+Targets_Acquired: 5
+Overshoots: 4
+Times: 18.41278 6.08 15.98 23.6 46.24 
+OGDistances: 498.5161 358.6122 842.8788 1081.476 1165.677 
+TravelledDistances: 1161 480 1761 2460 5235 
+Sizes: 70 70 70 70 70 
+Score: 379

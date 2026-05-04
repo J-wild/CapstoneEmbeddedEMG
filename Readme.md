@@ -4,7 +4,7 @@
 This project provides a scalable 8-channel Electromyography (EMG) acquisition system designed for the **Arduino UNO Q**. It integrates a custom **ADS1298 Analog Front-End (AFE)** shield with the software to capture biopotentials and perform real-time gesture recognition using on-device Neural Networks This repository contains the software used during testing to both run inferances on the UNO Q and to retrieve data from it. 
 
 
-## 1. The Testbench Program
+## 1. The Model Testbench Program
 The Testbench validates the Arduino UNO Q’s ability to execute local neural networks and measures performance metrics such as accuracy and latency.
 
 ### Components
@@ -42,8 +42,18 @@ This program does not interface with the MPU and therefore only uses a C++ ardui
 4. Launch the `Visualizer.py` application.
 5. Export the Data to a CSV using Keys R to record and S to stop.
 
-#### NOTE
+### Libraries
+The python scripts use the following libraries:
+1. [NumPY](https://github.com/numpy/numpy)
+2. [matplotlib](https://github.com/matplotlib/matplotlib)
+3. [Tkinter](https://docs.python.org/3/library/tkinter.html)
+4. [pyserial](https://github.com/pyserial/pyserial)
+5. [pandas](https://github.com/pandas-dev/pandas).
+
 The DAQ firware uses code adapted version of ADS129x Arduino library by [ferdinandkeil](https://github.com/ferdinandkeil/ADS129X) which itself was originaly adapted from [conorrussomanno](https://github.com/conorrussomanno/ADS1299). This codebase was adapted into the main MCU sketch as the arduino app lab had no dynamic ability to use external libraries at the time of development.
+
+### Datasets
+The training data used in the Edge Impulse model training and to test it is the DS11: minimal dataset which can be found in [LibEMG](https://github.com/LibEMG/libemg).
 
 
 

@@ -1,0 +1,3 @@
+pandas
+pyqtgraph 
+PyQt6.QtWidgets
