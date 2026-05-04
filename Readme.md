@@ -48,7 +48,7 @@ The python scripts use the following libraries:
 2. [matplotlib](https://github.com/matplotlib/matplotlib)
 3. [Tkinter](https://docs.python.org/3/library/tkinter.html)
 4. [pyserial](https://github.com/pyserial/pyserial)
-5. [pandas](https://github.com/pandas-dev/pandas).
+5. [pandas](https://github.com/pandas-dev/pandas)
 
 The DAQ firware uses code adapted version of ADS129x Arduino library by [ferdinandkeil](https://github.com/ferdinandkeil/ADS129X) which itself was originaly adapted from [conorrussomanno](https://github.com/conorrussomanno/ADS1299). This codebase was adapted into the main MCU sketch as the arduino app lab had no dynamic ability to use external libraries at the time of development.
 
